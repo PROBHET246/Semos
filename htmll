@@ -1,0 +1,127 @@
+<html lang="tr">
+<head>
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<title>Semos</title>
+  <style>
+    body {
+      background-image: url('https://i.imgur.com/AqPonw0.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      min-height: 50vh;
+    }
+
+    /* Koyu yarı saydam overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.35);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Overlay’in üstünde içerik */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .gizlikutu {
+      display: none;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-family: 'Pacifico', cursive;
+      font-size: 40px;
+      color: violet;
+      text-shadow:
+        1px 1px 0 black,
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black;
+    }
+
+    h2 {
+      margin-left: 8px;
+      font-family: 'Merriweather', serif;
+      font-size: 24px;
+      color: rgb(0, 0, 0);
+      border-width: thin;
+      cursor: pointer;
+      text-shadow:
+        0.3px 0.3px 0 rgb(0, 0, 0),
+        -0.3px -0.3px 0 rgb(0, 0, 0),
+        0.3px -0.3px 0 rgb(0, 0, 0),
+        -0.3px 0.3px 0 rgb(0, 0, 0);
+    }
+
+    p {
+      margin-left: 16px;
+      font-family: 'Lobster', cursive;
+      font-size: 18px;
+      color: rgb(156, 0, 104);
+      text-shadow: 4px;
+      cursor: pointer;
+      text-shadow:
+        1px 1px 0 black,
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black;
+    }
+  </style>
+</head>
+
+    <body>
+    <h1>Semosintheskywithcats</h1>
+        <h2 onclick="kutuyuac('acil1')"> BENNCE TIKLAMA</h2>
+         <div id="acil1" class="gizlikutu">
+             <p onclick="griyiac('gri1')">Şimdi sen beni ne kadar çok seviyon heh?</p>
+                <div>
+                <input id="gri1" class="gizlikutu" type="text" placeholder="Buraya yazcan mal">
+                </div>
+        
+        </div>
+       
+
+        <h2 onclick="kutuyuac('acil2')">Arşiv</h2>
+        <div id="acil2" class="gizlikutu">
+            <p>Vala çok yoruldum sonra yapacağım buraları</p>
+        </div>
+        <h2 onclick="kutuyuac('acil3')">Favoriler</h2>
+        <div id="acil3" class="gizlikutu">
+            <p>Vala çok yoruldum sonra yapacağım buraları</p>
+        </div>
+        <script>
+        function kutuyuac(id){
+                var kutularim = document.getElementById(id)
+                if (kutularim.style.display==="block"){
+                kutularim.style.display="none"
+                }
+                else{
+                    kutularim.style.display="block"
+                }
+            }
+        function griyiac(id){
+                var grilerim = document.getElementById(id)
+                if(grilerim.style.display==="block"){
+                grilerim.style.display="none"
+                }
+                else{
+                        grilerim.style.display="block"
+                    }
+
+                }
+                
+        </script>
+    </body>
+
+</html> 
